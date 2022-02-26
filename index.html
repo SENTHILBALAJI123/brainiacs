@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam Surveillance </title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <script src="verify.js">
+    </script> 
+</body>
+<body>
+    <link rel="stylesheet"href="style.css">
+</body>
+<header class="header">
+
+    <a href="#" class="logo"> <i class="brainiacs.jpeg"></i>  </a>
+    <div class="scrollmenu">
+        <a href="#home">Home</a>
+        <a href="#help">Help</a>
+        <a href="#about">About</a>
+      </div>
+
+  
+
+</header>
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="home-img.svg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>THE LIFE IS THE BIGGEST EXAM</h3>
+        <p><b>Cheating in exams may brings you good marks...But Studying brings you good marks as well as an inner peace.</b></p>
+
+    </div>
+
+</section>
+
+
+    <nav class="navbar background">
+    <ul class="nav-list">
+        <div class="logo">
+            <img src="brainiacs.jpeg">
+        </div>
+        <div class="title">
+          <head><b> THE BRAINIACS EXAM PORTAL </b></head>
+        </div>
+    </ul>
+</nav>
+<form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="admin.png" alt="Avatar" class="avatar">
+      <H1>ADMIN</H1>
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw"><a href="#">Forgot password?</a></span>
+    </div>
+  </form>
+  <form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="student.jpg" alt="Avatar" class="avatar">
+      <h1>STUDENT</h1>
+      <div class="instruct">
+      <h3>INSTRUCTION FOR STUDENTS</h3>
+      <li>Enter yor username and password correctly.</li>
+      <li>Any participants can attempt the contest only 1 time,only only your best score counts.</li>
+      <li>There will be no negative marking.</li>
+      <li>In case your session expires before the test,you can retake the test.the test will resume from where you leftoff,and the total time will reduce the duration of your previous attempt.
+      </li>
+      <li>Please ensure to attempt your profile and contact details.</li></div>
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for ="verification"><b>Verification</b></label>
+
+      <title>Face Verification</title>
+</head>
+<body>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+      </div>
+    </div>
+    <!-- INSERT NEXT CODE HERE -->
+  </div>
+<!-- Verify JS -->
+ <script src="verify.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<div class="row justify-content-md-center">
+  <div class="col-lg-4 text-center">
+    <p><strong>Verification Photo</strong></p>
+      <!-- Canvas For Uploaded Image -->
+      <canvas id="uploadCanvas" width="300"  height="300"></canvas>
+      <!-- Default Canvas Image -->
+      <img src="hi.jpg" id="uploadedPhoto" alt="upload"/>
+      <!-- Upload Image Input & Upload Photo Button -->
+      <input type="file" name="image-upload" accept="image/png, image/jpeg">
+      
+  </div>
+  <div class="col-lg-4 text-center">
+    
+    <!-- Take Photo Button -->  
+    
+    <button id="capture" type="button" class="btn btn-outline-primary btn-lg">Take Photo</button>
+  </div>
+  <div class="col-lg-4 text-center">
+    
+    <!-- Canvas For Capture Taken -->
+    <canvas id="captureCanvas" width="300"  height="300"></canvas>
+    <!-- Default Canvas Image -->
+    
+    <!-- Verify Photos Button -->
+    <button id="verify" type="button" class="btn btn-outline-success btn-lg">Verify Photo</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 text-center">
+    <!-- API Match Result & API Percentage Score -->
+    <h2 id="match" class="mt-5"></h2>
+    <p id="score" class="lead"></p>
+  </div>
+  <div class="col-lg-12 text-center">
+    <!-- Error & Warning Alerts -->
+    <div class="alert alert-danger" id="errorAlert"></div>
+    <div class="alert alert-warning" id="warningAlert"></div>
+  </div>
+</div>
+      
+      
+  
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw"> <a href="#">Forgot password?</a></span>
+    </div>
+  </form>
+  <footer class="background">
+    <P class="link">Contact us:
+      <a href="#The Brainiacs"><i class='fa fa-globe'></i>The Brainiacs.org</a>
+    </P>
+    <p class="text-footer">
+        Copyright ©-All rights are reserved
+    </p>
+
+
+</footer>
+
+</body>
+
+</html>
+                
+
+                
